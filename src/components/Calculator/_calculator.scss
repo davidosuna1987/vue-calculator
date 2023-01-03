@@ -1,0 +1,178 @@
+body {
+  background-image: url('https://res.cloudinary.com/pendragon/image/upload/v1668802784/wood-background-pattern-02_wpahdy.jpg');
+}
+
+.calculator {
+  &__frame {
+    max-width: 296px;
+    padding: 8px 8px 20px 8px;
+    margin: 20px auto;
+    background-color: #a7b7be;
+    border-radius: 4px;
+    border-top: 2px solid #fff;
+    border-right: 2px solid #fff;
+    border-bottom: 2px solid #c1c1c1;
+    border-left: 2px solid #c1c1c1;
+    box-shadow: -3px 3px 7px rgb(0 0 0 / 60%);
+    box-sizing: border-box;
+  }
+
+  &__display {
+    margin: 10px auto;
+    height: 120px;
+    padding: 10px;
+    border-radius: 4px;
+    border-top: 2px solid #c1c1c1;
+    border-right: 2px solid #c1c1c1;
+    border-bottom: 2px solid #fff;
+    border-left: 2px solid #fff;
+    background-color: #378f5c;
+    box-shadow: inset 0px 0px 10px #030303,
+      inset 0px -20px 1px rgb(150 150 150 / 20%);
+    color: #184129;
+    text-align: right;
+    font-family: 'DS-DIGIB', monospace, cursive;
+    font-size: 2.25rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-end;
+    overflow: hidden;
+    position: relative;
+  }
+
+  &__logs{
+    margin-bottom: 5px;
+    padding: 0 2px;
+    max-width: 100%;
+    position: absolute;
+    top: 7px;
+    overflow: hidden;
+    max-height: 95px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+
+  &__log{
+    display: block;
+    font-size: 1rem;
+    line-height: 1rem;
+    opacity: 0.75;
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    flex: 0 0 1rem;
+  }
+
+  &__sentence{
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  &__buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    text-align: center;
+    gap: 0.5rem;
+  }
+
+  &__button {
+    position: relative;
+    display: inline-block;
+    margin: 2px;
+    width: 55px;
+    height: 42px;
+    line-height: 42px;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 4px;
+    color: #181818;
+    text-shadow: 1px 1px 0px #fff;
+    background-color: #ebebeb;
+    border-top: 2px solid #fff;
+    border-right: 2px solid #fff;
+    border-bottom: 2px solid #c1c1c1;
+    border-left: 2px solid #c1c1c1;
+    box-shadow: 0px 0px 2px #030303, inset 0px -20px 1px #dcdcdc, 0 4px #333;
+
+    &:hover {
+      box-shadow: 0px 0px 2px #030303, inset 0px -20px 1px #dcdcdc, 0 3px #333;
+      top: 1px;
+    }
+
+    &:active {
+      box-shadow: 0px 0px 2px #030303, inset 0px -20px 1px #dcdcdc;
+      top: 4px;
+    }
+
+    &.clear {
+      color: #fff;
+      text-shadow: -1px -1px 0px #44006f;
+      background-color: #d20000;
+      border-top: 2px solid #ff8484;
+      border-right: 2px solid #ff8484;
+      border-bottom: 2px solid #800000;
+      border-left: 2px solid #800000;
+      box-shadow: 0px 0px 2px #030303, inset 0px -20px 1px #b00000, 0 4px #333;
+
+      &:hover {
+        box-shadow: 0px 0px 2px #030303, inset 0px -20px 1px #b00000, 0 3px #333;
+        top: 1px;
+      }
+
+      &:active {
+        box-shadow: 0px 0px 2px #030303, inset 0px -20px 1px #b00000;
+        top: 4px;
+      }
+    }
+
+    &.operator {
+      color: #fff;
+      text-shadow: -1px -1px 0px #030303;
+      background-color: #434343;
+      border-top: 2px solid #c1c1c1;
+      border-right: 2px solid #c1c1c1;
+      border-bottom: 2px solid #181818;
+      border-left: 2px solid #181818;
+      box-shadow: 0px 0px 2px #030303, inset 0px -20px 1px #2e2e2e, 0 4px #333;
+
+      &:hover {
+        box-shadow: 0px 0px 2px #030303, inset 0px -20px 1px #2e2e2e, 0 3px #333;
+        top: 1px;
+      }
+
+      &:active {
+        box-shadow: 0px 0px 2px #030303, inset 0px -20px 1px #2e2e2e;
+        top: 4px;
+      }
+    }
+
+    &.accent{
+      color: #fff;
+      text-shadow: -1px -1px 0px #532e00;
+      background-color: #ff8c00;
+      border-top: 2px solid #ffbf71;
+      border-right: 2px solid #ffbf71;
+      border-bottom: 2px solid #532e00;
+      border-left: 2px solid #532e00;
+      box-shadow: 0px 0px 2px #030303, inset 0px -20px 1px #d67600, 0 4px #333;
+
+      &:hover {
+        box-shadow: 0px 0px 2px #030303, inset 0px -20px 1px #d67600, 0 3px #333;
+        top: 1px;
+      }
+
+      &:active {
+        box-shadow: 0px 0px 2px #030303, inset 0px -20px 1px #d67600;
+        top: 4px;
+      }
+    }
+
+    &.wide {
+      grid-column: span 2;
+      width: auto;
+    }
+  }
+}
